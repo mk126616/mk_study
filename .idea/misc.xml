@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/payment/pom.xml" />
+        <option value="$PROJECT_DIR$/order_8082/pom.xml" />
+        <option value="$PROJECT_DIR$/payment_8081/pom.xml" />
+        <option value="$PROJECT_DIR$/Eureka_Server_8083/pom.xml" />
+        <option value="$PROJECT_DIR$/payment_zookeeper_8087/pom.xml" />
+        <option value="$PROJECT_DIR$/payment_zookeeper_8086/pom.xml" />
+        <option value="$PROJECT_DIR$/payment_eureka_8081/pom.xml" />
+        <option value="$PROJECT_DIR$/payment_eureka_feign_hystrix_8092/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/Eureka_8084/pom.xml" />
+        <option value="$PROJECT_DIR$/Test/pom.xml" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

@@ -1,0 +1,47 @@
+server:
+  port: 8095
+#mysql数据库配置
+spring:
+  application:
+    #    应用的别名;向eureka注册时时不能带下划线，会导致服务无法找到
+    name: gateway-service
+   #gateway网关配置
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true # 开启从注册中心动态创建路由的功能，利用微服务名称进行路由
+      routes:
+        - id: payment_route # 路由的id,没有规定规则但要求唯一,建议配合服务名
+          #匹配后提供服务的路由地址
+          #          uri: http://localhost:8001   #固定地址则直接写地址
+          uri: lb://PAYMENT-SERVICE   #通过服务注册中心获取服务地址则为 lb://服务名
+          filters:  #内置过滤器配置
+            - AddRequestHeader=X-Request-Foo, Bar  #给请求中增加请求头key为X-Request-Foo value为Bar
+          predicates:
+            - Path=/payments # 断言，路径相匹配的进行路由
+              #- After=2017-01-20T17:42:47.789-07:00[America/Denver]
+              #- Before=2017-01-20T17:42:47.789-07:00[America/Denver]
+              #- Cookie=username,zzyy
+              #- Header=X-Request-Id, \d+ #请求头要有X-Request-Id属性，并且值为正数
+              #- Host=**.atguigu.com
+              #- Method=GET
+              #- Query=username, \d+ # 要有参数名username并且值还要是正整数才能路由
+              # 过滤
+            #filters:
+            #  - AddRequestHeader=X-Request-red, blue
+
+
+
+#  eureka服务端信息配置
+eureka:
+  client:
+#    将自己注册到eureka上
+    register-with-eureka: true
+#    是否从服务端抓取注册信息
+    fetch-registry: true
+    service-url:
+# 入驻地址
+      defaultZone: http://eureka8083.com:8083/eureka/
+  instance:
+    instance-id: gateway-service8095

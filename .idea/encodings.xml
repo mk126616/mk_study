@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/Test/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Test/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common_resource/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common_resource/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka_Server_8083/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka_Server_8083/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka_server_8084/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka_server_8084/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gateway_8095/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gateway_8095/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hystrix_dashbord_8094/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hystrix_dashbord_8094/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/order_consul_8090/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/order_consul_8090/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/order_eureka_8082/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/order_eureka_8082/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/order_eureka_feign_hystrix_8093/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/order_eureka_feign_hystrix_8093/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/order_eureka_openFeign_8091/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/order_eureka_openFeign_8091/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/order_zookeeper_8088/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/order_zookeeper_8088/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/payment_consul_8089/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/payment_consul_8089/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/payment_eureka_8081/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/payment_eureka_8081/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/payment_eureka_8085/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/payment_eureka_8085/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/payment_eureka_feign_hystrix_8092/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/payment_eureka_feign_hystrix_8092/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/payment_zookeeper_8086/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/payment_zookeeper_8086/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/payment_zookeeper_8087/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/payment_zookeeper_8087/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring_cloud_config_8096/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring_cloud_config_8096/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

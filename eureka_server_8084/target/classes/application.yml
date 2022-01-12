@@ -1,0 +1,15 @@
+server:
+  port: 8084
+
+eureka:
+  instance:
+    hostname: eureka8084.com #eureka服务端实例名称,需要在系统host文件中增加配置(eureka集群实例名不能一样否则会导致不能相互注册)
+  client:
+    register-with-eureka: false #表示不向注册中心注册自己
+    fetch-registry: false #false表示自己就是注册中心，我的职责就是维护服务实例,并不区检索服务
+    service-url:
+      defaultZone: http://eureka8083.com:8083/eureka/ # 不搭建集群 单机 指向自己,集群版的话需要指向其他节点
+#      defaultZone: http://eureka7002.com:7002/eureka/,http://eureka7001.com:7001/eureka/ # 搭建集群 集群是指向其他eureka
+#  server:
+#    enable-self-preservation: false # 只在服务端生效，关闭自我保护机制 保证不可用服务及时清除
+#    eviction-interval-timer-in-ms: 2000  #剔除服务的时间频率

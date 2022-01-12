@@ -1,0 +1,31 @@
+server:
+  port: 8089
+#mysql数据库配置
+spring:
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://192.168.62.130:3306/mk_test_database?useUnicode=true&characterEncoding=utf-8&&userSSl=false
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    maxCreateTaskCount: 10
+    initialize: true
+  application:
+    #    应用的别名
+    name: payment-service
+  cloud:
+    consul:
+      host: 192.168.62.130
+      port: 8500
+      discovery:
+        heartbeat:
+          enabled: true  #必须开启心跳检查，否则consul中服务状态错误，导致通过服务名无法找到服务
+#mybatis
+mybatis:
+  config-location: classpath:mybatis-config.xml
+  mapper-locations: classpath:com/mk/mapper/*Mapper.xml
+#actuator 健康检查返回详细检查信息
+management:
+  endpoint:
+    health:
+      show-details: always
