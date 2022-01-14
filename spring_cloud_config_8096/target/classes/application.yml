@@ -1,3 +1,49 @@
 server:
-  port: 8095
+  port: 8096
+spring:
+  application:
+    name: spring_cloud_config_8096
+  rabbitmq:
+    host: 192.168.62.130
+    port: 5672
+    username: root
+    password: 123456
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/mk126616/spring_cloud_config_file.git #GitHub上面的git仓库名字
+            ####搜索目录
+          search-paths:
+            - spring_cloud_config_file
+          skip-ssl-validation: true
+          username: mk126616
+          password: mk190705
+        ####读取分支
+      label: master
 
+eureka:
+  client:
+    #    将自己注册到eureka上
+    register-with-eureka: true
+    #    是否从服务端抓取注册信息
+    fetch-registry: true
+    service-url:
+      # 入驻地址
+      defaultZone: http://eureka8083.com:8083/eureka/
+  instance:
+    instance-id: spring_cloud_config_8096  #微服务id
+    prefer-ip-address: true #配置中新显示ip
+
+rabbitmq:
+  host: 192.168.62.130
+  port: 5672
+  username: root
+  password: 123456
+
+#rabbitmq暴露bus刷新配置端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'bus-refresh'

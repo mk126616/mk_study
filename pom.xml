@@ -24,6 +24,8 @@
         <module>hystrix_dashbord_8094</module>
         <module>gateway_8095</module>
         <module>spring_cloud_config_8096</module>
+        <module>spring_cloud_config_client_8097</module>
+        <module>spring_cloud_config_client_8098</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

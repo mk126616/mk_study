@@ -1,0 +1,38 @@
+#bootstrap.yml只有在spring cloud中才会被识别，优先级比较高，先于application.yml文件加载并且配置项不能被覆盖
+spring:
+  application:
+    name: spring_cloud_config_client
+  rabbitmq:
+    host: 192.168.62.130
+    port: 5672
+    username: root
+    password: 123456
+  cloud:
+    config:
+      label: master #文件所处git分支
+      name: application #文件名
+      profile: dev  #文件名后缀
+#      uri: http://localhost:8096  #配置中心服务config服务地址(不使用注册中时使用，直接写死的地址)
+#开启eureka服务发现功能
+      discovery:
+        enabled: true
+        service-id: SPRING_CLOUD_CONFIG_8096
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka8083.com:8083/eureka/
+    fetch-registry: true
+    register-with-eureka: true
+  instance:
+    instance-id: spring_cloud_config_client_8097  #微服务id
+    prefer-ip-address: true #配置中新显示ip
+
+# 暴露监控端点，目的是git配置修改后刷新本地内存中配置项使用
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
