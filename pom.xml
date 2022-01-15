@@ -26,6 +26,9 @@
         <module>spring_cloud_config_8096</module>
         <module>spring_cloud_config_client_8097</module>
         <module>spring_cloud_config_client_8098</module>
+        <module>cloud_stream_rabbitmq_provider_8099</module>
+        <module>cloud_stream_rabbitmq_consumer_8100</module>
+        <module>cloud_stream_rabbitmq_consumer_8101</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

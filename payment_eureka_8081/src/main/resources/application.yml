@@ -14,6 +14,12 @@ spring:
   application:
     #    应用的别名;向eureka注册时时不能带下划线，会导致服务无法找到
     name: payment-service
+  zipkin:
+    base-url: http://192.168.62.130:9411
+    sleuth:
+      sampler:
+        #采样率0到1之间，1为全部采集
+        probability: 1
 #mybatis
 mybatis:
   config-location: classpath:mybatis-config.xml
@@ -27,9 +33,9 @@ eureka:
     fetch-registry: true
     service-url:
 # 入驻地址
-      defaultZone: http://eureka8083.com:8083/eureka/,http://eureka8084.com:80834/eureka/
+      defaultZone: http://eureka8083.com:8083/eureka/
   instance:
     instance-id: payment-service-8081 #实例名称
     prefer-ip-address: true  #
-#    lease-renewal-interval-in-seconds: 1 #心跳频率，单位为秒 默认为30
-#    lease-expiration-duration-in-seconds: 90    #心跳超时则剔除服务
+    lease-renewal-interval-in-seconds: 1 #心跳频率，单位为秒 默认为30
+    lease-expiration-duration-in-seconds: 90    #心跳超时则剔除服务

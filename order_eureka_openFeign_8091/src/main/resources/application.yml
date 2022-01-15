@@ -1,31 +1,29 @@
 server:
   port: 8091
 
-#mysql数据库配置
+
 spring:
-  datasource:
-    username: root
-    password: 123456
-    url: jdbc:mysql://192.168.62.130:3306/mk_test_database?useUnicode=true&characterEncoding=utf-8&&userSSl=false
-    driver-class-name: com.mysql.jdbc.Driver
-    type: com.alibaba.druid.pool.DruidDataSource
-    maxCreateTaskCount: 10
-    initialize: true
 #    应用的别名（非项目访问路径），可以不加
   application:
     name: order-service
-
+  zipkin:
+    base-url: http://192.168.62.130:9411
+    sleuth:
+      sampler:
+        #采样率0到1之间，1为全部采集
+        probability: 1
 
 #  eureka服务端信息配置
 eureka:
   client:
     #    将自己注册到eureka上
-    register-with-eureka: false
+    register-with-eureka: true
     #    是否从服务端抓取注册信息
     fetch-registry: true
     service-url:
       # 入驻地址
-      defaultZone: http://eureka8083.com:8083/eureka/,http://eureka8084.com:80834/eureka/
+    #  defaultZone: http://eureka8083.com:8083/eureka/,http://eureka8084.com:80834/eureka/
+      defaultZone: http://eureka8083.com:8083/eureka/
 ribbon:
   ReadTimeout: 5000
   ConnectTimeout: 5000

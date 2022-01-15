@@ -1,0 +1,37 @@
+server:
+  port: 8100
+
+spring:
+  application:
+    name: cloud_stream_rabbitmq_consumer
+  cloud:
+    stream:
+      binders:      #此处开始配置要绑定消息中间件的信息
+        defaultRabbit:
+          type: rabbit   #组件类型
+          environment:
+            spring:
+              rabbitmq:
+                host: 192.168.62.130
+                port: 5672
+                username: root
+                password: 123456
+      bindings: #服务的整合处理
+        input:
+          destination: studyExchange  #交换机名称
+          contetType: application/json   #数据类型 文本为：text/plain
+          binder: defaultRabbit   #绑定消息服务的名称
+          #队列名称,不配置则会生成一个随机的队列名，并且队列不会持久化，消费者宕机时消息会有丢失，并且消息会出现同种服务不同节点都消费的问题
+          #配置了队列名则会创建一个持久化的队列，并且为了消息不被同中服务持久化，一定要配置
+          group: stream_consumer_queue
+eureka:
+  instance:
+    instance-id: cloud_stream_rabbitmq_consumer_8100
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 2 #心跳时间默认30s
+    lease-expiration-duration-in-seconds: 5 #心跳超时时间，超时未收到心跳节点会被剔除
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://eureka8083.com:8083/eureka/

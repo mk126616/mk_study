@@ -35,12 +35,6 @@ eureka:
     instance-id: spring_cloud_config_8096  #微服务id
     prefer-ip-address: true #配置中新显示ip
 
-rabbitmq:
-  host: 192.168.62.130
-  port: 5672
-  username: root
-  password: 123456
-
 #rabbitmq暴露bus刷新配置端点
 management:
   endpoints:

@@ -11,6 +11,11 @@
 
     <artifactId>payment_eureka_8081</artifactId>
     <dependencies>
+        <!--sleuth 和zipkin-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-zipkin</artifactId>
+        </dependency>
         <!--eureka-client-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
