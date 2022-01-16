@@ -16,7 +16,7 @@ public class MyLoadBalancer implements LoadBalancer
      * 调用修改方法时两个线程都给的值为1，则最终的值为1，数据出现问题。
      * 因此在此业务场景下可以对整个方法加锁，或者使用轻量级别的自旋锁
      */
-    private AtomicInteger requestCount = new AtomicInteger(0);
+    private  AtomicInteger requestCount = new AtomicInteger(0);
 
     @Override
     public ServiceInstance choose(List<ServiceInstance> serviceInstances) throws Exception

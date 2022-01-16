@@ -4,6 +4,7 @@ import com.mk.entity.PaymentEntity;
 import com.mk.entity.Result;
 import com.mk.service.mapper.PaymentMapper;
 
+import com.netflix.hystrix.contrib.javanica.annotation.DefaultProperties;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import org.springframework.beans.factory.annotation.Autowired;

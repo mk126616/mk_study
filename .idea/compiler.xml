@@ -8,12 +8,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="spring_cloud_config_client_8097" />
-        <module name="cloud_stream_rabbitmq_consumer_8101" />
+        <module name="common_resource" />
         <module name="payment_consul_8089" />
         <module name="Eureka_8084" />
         <module name="order_eureka_openFeign_8091" />
-        <module name="common_resource" />
+        <module name="cloud_stream_rabbitmq_consumer_8100" />
         <module name="payment_zookeeper_8087" />
+        <module name="payment_zookeeper_8086" />
         <module name="payment_eureka_feign_hystrix_8092" />
         <module name="eureka_Server_8083" />
         <module name="gateway_8095" />
@@ -21,14 +22,13 @@
         <module name="spring_cloud_config_8096" />
         <module name="Test" />
         <module name="cloud_stream_rabbitmq_provider_8099" />
-        <module name="payment_zookeeper_8086" />
-        <module name="cloud_stream_rabbitmq_consumer_8100" />
+        <module name="cloud_stream_rabbitmq_consumer_8101" />
+        <module name="eureka_server_8084" />
         <module name="order_zookeeper_8088" />
         <module name="order_consul_8090" />
-        <module name="payment_eureka_8081" />
         <module name="payment_eureka_8085" />
         <module name="order_eureka_feign_hystrix_8093" />
-        <module name="eureka_server_8084" />
+        <module name="payment_eureka_8081" />
         <module name="hystrix_dashbord_8094" />
         <module name="spring_cloud_config_client_8098" />
       </profile>
